@@ -48,20 +48,27 @@ export default function Education({ dark }: EducationProps) {
                   : 'bg-white shadow-sm border border-gray-100 hover:shadow-md'
               }`}>
                 {/* Top row */}
-                <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div className="flex items-start gap-4 mb-5">
+                  <img
+                    src={edu.logo}
+                    alt={edu.institution}
+                    className="w-20 h-20 object-contain rounded-xl bg-white p-2 shadow-lg"
+                  />
+
                   <div>
                     <h3 className={`text-xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>
-                      {edu.degree}
+                     {edu.degree}
                     </h3>
+
                     <p className={`text-base font-semibold mt-1 ${dark ? 'text-blue-400' : 'text-blue-600'}`}>
                       {edu.institution}
                     </p>
                   </div>
-                  <div className="text-right flex-shrink-0">
-                    <span className={`text-sm px-3 py-1.5 rounded-lg font-medium ${dark ? 'bg-blue-600/20 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
-                      {edu.period}
+                </div>
+                <div className="mb-4">
+                  <span className={`inline-block text-sm px-3 py-1.5 rounded-lg font-medium ${dark ? 'bg-blue-600/20 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
+                    {edu.period}
                     </span>
-                  </div>
                 </div>
 
                 {/* Score */}

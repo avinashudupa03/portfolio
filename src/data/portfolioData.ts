@@ -28,19 +28,29 @@ export const skills = {
     { name: 'Java', level: 70 },
     { name: 'Python', level: 72 },
   ],
+
   webDev: [
     { name: 'HTML', level: 92 },
     { name: 'CSS', level: 88 },
     { name: 'JavaScript', level: 82 },
     { name: 'React', level: 78 },
   ],
+
   database: [
     { name: 'MySQL', level: 80 },
+    { name: 'SQL', level: 78 },
   ],
+
   tools: [
     { name: 'Git', level: 75 },
     { name: 'GitHub', level: 78 },
     { name: 'Linux', level: 60 },
+    { name: 'VS Code', level: 90 },
+  ],
+
+  backend: [
+    { name: 'Node.js', level: 60 },
+    { name: 'Express.js', level: 55 },
   ],
 };
 
@@ -48,6 +58,7 @@ export const education = [
   {
     degree: 'Bachelor of Computer Applications (BCA)',
     institution: 'Nitte University',
+    logo: '/nitte-logo.png',
     period: 'Currently Pursuing',
     score: 'CGPA: 9.1',
     icon: '🎓',
@@ -56,6 +67,7 @@ export const education = [
   {
     degree: 'Commerce (CEBA)',
     institution: 'Janatha Independent PU College, Hemmady',
+    logo: '/janatha-logo.png',
     period: 'Completed',
     score: '95% — Scored 99 in Computer Science',
     icon: '📚',

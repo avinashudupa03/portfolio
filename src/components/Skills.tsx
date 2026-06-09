@@ -6,55 +6,22 @@ interface SkillsProps {
 }
 
 const categoryConfig = [
+  { key: 'webDev', label: 'Frontend Development', icon: '🌐', color: 'from-cyan-600 to-cyan-400' },
   { key: 'programming', label: 'Programming Languages', icon: '💻', color: 'from-blue-600 to-blue-400' },
-  { key: 'webDev', label: 'Web Development', icon: '🌐', color: 'from-cyan-600 to-cyan-400' },
-  { key: 'database', label: 'Database', icon: '🗄️', color: 'from-emerald-600 to-emerald-400' },
+  { key: 'database', label: 'Database Management', icon: '🗄️', color: 'from-emerald-600 to-emerald-400' },
   { key: 'tools', label: 'Tools & Technologies', icon: '🛠️', color: 'from-orange-500 to-amber-400' },
 ];
-
-interface SkillBarProps {
-  name: string;
-  level: number;
-  color: string;
-  dark: boolean;
-  animate: boolean;
-  delay: number;
-}
-
-function SkillBar({ name, level, color, dark, animate, delay }: SkillBarProps) {
-  return (
-    <div className="group">
-      <div className="flex justify-between items-center mb-2">
-        <span className={`text-sm font-medium ${dark ? 'text-slate-300' : 'text-gray-700'}`}>{name}</span>
-        <span className={`text-xs font-semibold ${dark ? 'text-slate-400' : 'text-gray-500'}`}>{level}%</span>
-      </div>
-      <div className={`h-2 rounded-full ${dark ? 'bg-white/10' : 'bg-gray-100'} overflow-hidden`}>
-        <div
-          className={`h-full rounded-full bg-gradient-to-r ${color} transition-all ease-out`}
-          style={{
-            width: animate ? `${level}%` : '0%',
-            transitionDuration: '1.4s',
-            transitionDelay: `${delay}ms`,
-          }}
-        />
-      </div>
-    </div>
-  );
-}
 
 const allTechBadges = [
   { name: 'React', color: 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30' },
   { name: 'JavaScript', color: 'bg-yellow-500/15 text-yellow-400 border-yellow-500/30' },
   { name: 'Python', color: 'bg-blue-500/15 text-blue-400 border-blue-500/30' },
   { name: 'Java', color: 'bg-orange-500/15 text-orange-400 border-orange-500/30' },
-  { name: 'C++', color: 'bg-purple-500/15 text-purple-400 border-purple-500/30' },
   { name: 'MySQL', color: 'bg-teal-500/15 text-teal-400 border-teal-500/30' },
   { name: 'HTML5', color: 'bg-red-500/15 text-red-400 border-red-500/30' },
   { name: 'CSS3', color: 'bg-blue-500/15 text-blue-400 border-blue-500/30' },
   { name: 'Git', color: 'bg-orange-500/15 text-orange-400 border-orange-500/30' },
   { name: 'GitHub', color: 'bg-slate-500/15 text-slate-400 border-slate-500/30' },
-  { name: 'Linux', color: 'bg-amber-500/15 text-amber-400 border-amber-500/30' },
-  { name: 'C', color: 'bg-slate-500/15 text-slate-400 border-slate-500/30' },
 ];
 
 export default function Skills({ dark }: SkillsProps) {
@@ -112,17 +79,18 @@ export default function Skills({ dark }: SkillsProps) {
                   </div>
                   <h3 className={`font-bold text-lg ${dark ? 'text-white' : 'text-gray-900'}`}>{cat.label}</h3>
                 </div>
-                <div className="space-y-4">
-                  {categorySkills.map((skill, i) => (
-                    <SkillBar
+                <div className="flex flex-wrap gap-3">
+                  {categorySkills.map((skill) => (
+                    <span
                       key={skill.name}
-                      name={skill.name}
-                      level={skill.level}
-                      color={cat.color}
-                      dark={dark}
-                      animate={isVisible}
-                      delay={catIdx * 100 + i * 120}
-                    />
+                      className={`px-4 py-2 rounded-xl text-sm font-medium ${
+                        dark
+                          ? 'bg-white/10 text-slate-300 border border-white/10'
+                          : 'bg-gray-100 text-gray-700 border border-gray-200'
+                      }`}
+                    >
+                      {skill.name}
+                    </span>
                   ))}
                 </div>
               </div>
