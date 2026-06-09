@@ -1,4 +1,3 @@
-import { useRef, useEffect, useState } from 'react';
 import { skills } from '../data/portfolioData';
 import { useScrollReveal } from '../hooks/useAnimations';
 

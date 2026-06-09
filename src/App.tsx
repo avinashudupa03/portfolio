@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 export default function App() {
   const [dark, setDark] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -25,8 +26,24 @@ export default function App() {
     setMounted(true);
   }, [dark]);
 
-  if (!mounted) return null;
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 2500);
 
+  return () => clearTimeout(timer);
+}, []);
+
+  if (!mounted) return null;
+  if (loading) {
+  return (
+    <div className="min-h-screen bg-dark-900 flex flex-col items-center justify-center text-white">
+      <h1 className="text-5xl font-bold mb-4">M Avinash Udupa</h1>
+      <p className="text-slate-400 mb-6">Loading Portfolio...</p>
+      <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  );
+}
   return (
     <div className={dark ? 'dark' : ''}>
       <div className={`min-h-screen transition-colors duration-300 ${

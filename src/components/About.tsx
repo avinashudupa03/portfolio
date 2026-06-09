@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { MapPin, Mail, Phone, Github, Linkedin, Target, Cpu, Code2, Layers } from 'lucide-react';
 import { personalInfo, hobbies, languages } from '../data/portfolioData';
 import { useScrollReveal, useCounter } from '../hooks/useAnimations';

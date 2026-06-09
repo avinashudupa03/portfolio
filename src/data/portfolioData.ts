@@ -136,7 +136,7 @@ export const certifications = [
     certificate: '/Linux.microsoft.pdf',
   },
   {
-    title: 'Linux Fundamentals',
+    title: 'Linux System Administration',
     issuer: 'Google',
     description: 'Google Linux certification.',
     icon: '🐧',
@@ -154,7 +154,7 @@ export const certifications = [
     certificate: '/Sql.microsoft.pdf',
   },
   {
-    title: 'SQL Basics',
+    title: 'Advanced SQL & Database Management',
     issuer: 'Google',
     description: 'Google SQL certification.',
     icon: '🗄️',
