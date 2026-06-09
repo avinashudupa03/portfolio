@@ -37,13 +37,14 @@ export default function Certifications({ dark }: CertificationsProps) {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {certifications.map((cert, idx) => (
             <div
-              key={cert.title}
-              className={`group reveal-scale ${isVisible ? 'visible' : ''} relative rounded-2xl p-6 overflow-hidden cursor-default transition-all duration-300 hover:-translate-y-2 card-glow ${
-                dark
-                  ? 'glass border border-white/10'
-                  : 'glass-light border border-white/60 shadow-lg'
-              }`}
-              style={{ transitionDelay: `${idx * 150}ms` }}
+                key={`${cert.title}-${cert.issuer}`}
+                onClick={() => window.open(cert.certificate, '_blank')}
+                className={`group reveal-scale ${isVisible ? 'visible' : ''} relative rounded-2xl p-6 overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 card-glow ${
+                    dark
+                      ? 'glass border border-white/10'
+                      : 'glass-light border border-white/60 shadow-lg'
+                }`}
+                 style={{ transitionDelay: `${idx * 150}ms` }}
             >
               {/* Background gradient on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
