@@ -181,7 +181,7 @@ export const certifications = [
     icon: '📱',
     color: 'from-emerald-500 to-teal-500',
     skills: ['Android SDK', 'Java', 'UI Design', 'App Deployment'],
-    certificate: '/Android certificate.pdf',
+    certificate: '/Android-certificate.pdf',
   },
 ];
 
