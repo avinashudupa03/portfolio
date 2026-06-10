@@ -61,7 +61,7 @@ export default function About({ dark }: AboutProps) {
               <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600 to-cyan-500 opacity-10 blur-xl`} />
               <div className={`relative rounded-3xl overflow-hidden border-2 ${dark ? 'border-white/10' : 'border-gray-100'} shadow-2xl`}>
                 <img
-                  src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="/photo.webp"
                   alt="Developer workspace"
                   className="w-full h-80 object-cover"
                 />
