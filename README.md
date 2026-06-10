@@ -1,3 +1,18 @@
 # portfolio
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-dp1fry8z)
+# Portfolio Website
+
+Personal portfolio website built using React, TypeScript, Vite and Tailwind CSS.
+
+## Features
+- Responsive Design
+- Skills Section
+- Projects Section
+- Contact Section
+- Dark Theme
+
+## Installation
+
+```bash
+npm install
+npm run dev
